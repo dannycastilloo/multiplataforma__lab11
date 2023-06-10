@@ -24,8 +24,6 @@ namespace multiplataforma__lab11.ViewModels
             }
         }
 
-
-
         int valorB;
         public int ValorB
         {
@@ -40,58 +38,55 @@ namespace multiplataforma__lab11.ViewModels
             }
         }
 
+        int resultado;
 
-        int resultadoSuma;
         public int ResultadoSuma
         {
-            get { return resultadoSuma; }
+            get { return resultado; }
             set
             {
-                if (resultadoSuma != value)
+                if (resultado != value)
                 {
-                    resultadoSuma = value;
+                    resultado = value;
                     OnPropertyChanged();
                 }
             }
         }
 
-        int resultadoResta;
         public int ResultadoResta
         {
-            get { return resultadoResta; }
+            get { return resultado; }
             set
             {
-                if (resultadoResta != value)
+                if (resultado != value)
                 {
-                    resultadoResta = value;
+                    resultado = value;
                     OnPropertyChanged();
                 }
             }
         }
 
-        int resultadoMultiplicacion;
-        public int ResultadoMultiplicacion
+        public int ResultadoMultiplicar
         {
-            get { return resultadoMultiplicacion; }
+            get { return resultado; }
             set
             {
-                if (resultadoMultiplicacion != value)
+                if (resultado != value)
                 {
-                    resultadoMultiplicacion = value;
+                    resultado = value;
                     OnPropertyChanged();
                 }
             }
         }
 
-        int resultadoDivision;
-        public int ResultadoDivision
+        public int ResultadoDividir
         {
-            get { return resultadoDivision; }
+            get { return resultado; }
             set
             {
-                if (resultadoDivision != value)
+                if (resultado != value)
                 {
-                    resultadoDivision = value;
+                    resultado = value;
                     OnPropertyChanged();
                 }
             }
@@ -108,23 +103,23 @@ namespace multiplataforma__lab11.ViewModels
         {
             Sumar = new Command(() =>
             {
-                resultadoSuma = ValorA + ValorB;
+                ResultadoSuma = ValorA + ValorB;
             });
 
 
             Restar = new Command(() =>
             {
-                resultadoResta = ValorA - ValorB;
+                ResultadoResta = ValorA - ValorB;
             });
 
             Multiplicar = new Command(() =>
             {
-                resultadoMultiplicacion = ValorA * ValorB;
+                ResultadoMultiplicar = ValorA * ValorB;
             });
 
             Dividir = new Command(() =>
             {
-                resultadoDivision = ValorA / ValorB;
+                ResultadoDividir = ValorB / ValorA;
             });
         }
 
